@@ -1,0 +1,13 @@
+/*
+ * etx_ota_update.h
+ *
+ *  Created on: Sep 3, 2024
+ *      Author: kumkumita.sahu
+ */
+
+#ifndef SRC_ETX_OTA_UPDATE_H_
+#define SRC_ETX_OTA_UPDATE_H_
+
+
+
+#endif /* SRC_ETX_OTA_UPDATE_H_ */

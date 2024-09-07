@@ -1,0 +1,10 @@
+11:50:44 **** Incremental Build of configuration Debug for project Bootloader_F3 ****
+make -j16 all 
+arm-none-eabi-size  Bootloader_F3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16664	    104	   2040	  18808	   4978	Bootloader_F3.elf
+Finished building: default.size.stdout
+ 
+
+11:50:45 Build Finished. 0 errors, 0 warnings. (took 209ms)
+

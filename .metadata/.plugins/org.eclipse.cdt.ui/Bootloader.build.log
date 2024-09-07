@@ -1,0 +1,21 @@
+00:28:18 **** Incremental Build of configuration Debug for project Bootloader ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/etx_ota_update.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Core/Src -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/etx_ota_update.d" -MT"Core/Src/etx_ota_update.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/etx_ota_update.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Core/Src -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Bootloader.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\kumkumita.sahu\STM32CubeIDE\workspace_1.16.0\Bootloader\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bootloader.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Bootloader.elf
+ 
+arm-none-eabi-size  Bootloader.elf 
+arm-none-eabi-objdump -h -S Bootloader.elf  > "Bootloader.list"
+arm-none-eabi-objcopy  -O ihex Bootloader.elf  "Bootloader.hex"
+   text	   data	    bss	    dec	    hex	filename
+  19688	    104	   3256	  23048	   5a08	Bootloader.elf
+Finished building: default.size.stdout
+ 
+Finished building: Bootloader.hex
+ 
+Finished building: Bootloader.list
+ 
+
+00:28:19 Build Finished. 0 errors, 0 warnings. (took 881ms)
+

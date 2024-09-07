@@ -1,0 +1,19 @@
+23:02:04 **** Incremental Build of configuration Debug for project Application ****
+make -j16 all 
+arm-none-eabi-gcc -o "Application.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\kumkumita.sahu\STM32CubeIDE\workspace_1.16.0\Application\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Application.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Application.elf
+ 
+arm-none-eabi-size  Application.elf 
+arm-none-eabi-objdump -h -S Application.elf  > "Application.list"
+arm-none-eabi-objcopy  -O ihex Application.elf  "Application.hex"
+   text	   data	    bss	    dec	    hex	filename
+  15812	    104	   2040	  17956	   4624	Application.elf
+Finished building: default.size.stdout
+ 
+Finished building: Application.list
+ 
+Finished building: Application.hex
+ 
+
+23:02:05 Build Finished. 0 errors, 0 warnings. (took 951ms)
+
